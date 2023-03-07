@@ -1,12 +1,17 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../Partials/Navbar/Navbar';
+import SideMenu from '../Partials/SideMenu/SideMenu';
 
 const MainLayout = () => {
   return (
-    <main className="relative h-screen overflow-hidden bg-gray-100">
-      <Navbar />
-      <Outlet />
+    <main>
+      <div className="flex">
+        <SideMenu />
+        <div className="w-full p-5">
+          <Outlet />
+        </div>
+      </div>
     </main>
   );
 };
