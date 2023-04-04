@@ -6,11 +6,12 @@ import { MenuItems } from './MenuItems';
 
 const SideMenu = () => {
   return (
-    <aside className="pt-5 pl-5 w-64 h-screen bg-gray-300 border-r border-gray-200 text-slate-700">
-      <img src={logo} className="w-20 mb-5" />
-      {MenuItems.map((menu) => {
+    <aside className="py-3 px-3 w-64 h-screen bg-white border-r border-gray-200 text-slate-700">
+      <img src={logo} className="h-10" />
+      {MenuItems.map((menu, index) => {
         return (
           <MenuItem
+            key={index}
             path={menu.path}
             title={menu.title}
             icon={menu.icon}

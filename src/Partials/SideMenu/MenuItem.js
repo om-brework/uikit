@@ -6,10 +6,10 @@ const MenuItem = ({ path, title, icon }) => {
   return (
     <Link
       to={path}
-      className="flex item-center text-sm text-slate-700"
+      className="hover:text-gray800 hover:bg-gray-100 flex p-2 my-3 items-center transition-colors"
     >
-      {icon ? icon : ''}
-      {title}
+      <div className="w-5 h-5">{icon ? icon : ''}</div>
+      <span className="align-middle">{title}</span>
     </Link>
   );
 };
